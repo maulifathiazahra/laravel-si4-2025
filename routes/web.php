@@ -14,7 +14,7 @@ Route::get('/home', function () {
     return view('home');
 });
 
-Route::get('/mahasiswa', function () {
+Route::get('/Mahasiswa', function () {
     return view('mahasiswa');
 });
 
