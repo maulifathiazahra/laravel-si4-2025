@@ -15,18 +15,14 @@ Route::get('/home', function () {
 });
 
 Route::get('/Mahasiswa', function () {
-    return view('mahasiswa');
+    $npm = [123,124,125,126];
+    $nama = ['Cantika','Zahra','Melati','Rara'];
+    $jumlah = count ($npm);
+    return view('mahasiswa',compact('npm','jumlah','nama'));
 });
 
 Route::get('/profile', function () {
     $nama = 'Mauli Fathia Zahra';
     //return view('profile' , compact ('nama'));
     return view('profile')->with('nama', $nama);
-});
-
-Route::get('array', function(){
-    for ($i=1; $i <= 5; $i++) {
-        echo 'Hello Word ' . $i . 'x<br>';
-
-    }
 });

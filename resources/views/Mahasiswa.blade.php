@@ -43,26 +43,19 @@
         <th colspan="2">TTL</th>
       </tr>
     </thead>
-  </tbody>
+  <tbody>
+  <?php $nilai_awal = 0; ?>
+  @while ($nilai_awal < $jumlah)
+  
   <tr>
-        <td>123</td>
-        <td>Cantika</td>
+        <td>{{ $npm[$nilai_awal] }}</td>
+        <td>{{ $nama[$nilai_awal] }}</td>
         <td>Perempuan</td>
         <td>12-08-2007</td>
-        <td rowspan="3">Kota Medan</td>
+        <td>Kota Medan</td>
   </tr>
-   <tr>
-        <td>124</td>
-        <td>Zahra</td>
-        <td>Perempuan</td>
-        <td>21-06-2008</td>
-  </tr>  
-  <tr>
-        <td>125</td>
-        <td>Raziq</td>
-        <td>Laki-Laki</td>
-        <td>2-03-2009</td>
-  </tr>
+  <?php $nilai_awal++ ?>
+  @endwhile
   </tbody>
 </table>
 
